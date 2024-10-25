@@ -1,0 +1,146 @@
+:root {
+  --text: #0f0a10;
+  --background: #c3b1e1;
+  --primary: #000000;
+  --secondary: #ad81f3;
+  --accent: #7234d5;
+  --div-boxes: #b899ea;
+}
+.dark-theme {
+  --text: #d7cde2;
+  --background: #1b102b;
+  --primary: #c29be4;
+  --secondary: #380c7e;
+  --accent: #682acb;
+  --div-boxes: #1e1033;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+}
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+.navbar a:hover {
+  -webkit-text-fill-color: var(--primary);
+  color: black;
+  transform: translate(0, 3px);
+}
+
+.navbar li {
+  font-size: 2rem;
+  float: left;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: var(--text); /* Applied text color */
+  background-color: var(--background); /* Applied background color */
+  transition: 0.5s;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  padding: 15%;
+  font-size: 10rem;
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sauce {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#name {
+  font-size: 2rem;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#Projects h1 {
+  display: block;
+  float: left;
+}
+#Projects .weather {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  background-color: var(--div-boxes);
+}
+
+#Projects .weather.container {
+  width: 50%;
+  border-radius: 100px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+
+#Projects .weather.under {
+  width: 50%; /* Same width as container */
+  padding: 20px;
+  background-color: var(--div-boxes); /* Optional: apply background to under */
+  border-radius: 50px; /* Rounded corners */
+}
+
+#Projects .weather h2 {
+  font-size: 5rem;
+}
+
+#Projects .weather h3 {
+  font-size: 3rem;
+}
+
+#Projects .weather h4 {
+  font-size: 2rem;
+}
+.background_box {
+  margin-right: 35px;
+  background-color: var(--background);
+  transition: 0.5s;
+}
+.toggle_box {
+  width: 100px;
+  height: 50px;
+  display: block;
+  background-color: #000;
+  border-radius: 1000px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background);
+  border-radius: 100%;
+  margin: 5px;
+  transition: 0.5s;
+}

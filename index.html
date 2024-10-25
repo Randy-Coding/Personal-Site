@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Randy A</title>
+    <link href="styles.css" rel="stylesheet" />
+    <svg width="0" height="0">
+      <defs>
+        <linearGradient id="gradient" gradientTransform="rotate(120)">
+          <stop offset="0%" stop-color="var(--primary)" />
+          <stop offset="100%" stop-color="var(--accent)" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </head>
+  <body>
+    <div id="header">
+      <div id="name">Kage</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="index.html">Skills</a></li>
+          <li><a href="index.html">Experience</a></li>
+          <li><a href="index.html">Links</a></li>
+          <li><a href="index.html">Resume</a></li>
+          <li><a href="index.html">Contact me</a></li>
+        </ul>
+      </nav>
+      <div class="background_box">
+        <!-- toggle button -->
+        <label class="toggle_box">
+          <input type="checkbox" id="checkbox" />
+          <div class="circle"></div>
+        </label>
+      </div>
+    </div>
+
+    <h1>Random Profound Quote</h1>
+    <div id="main">
+      <div id="Projects">
+        <div class="weather container">
+          <h2 class="sauce">Weather Prediction Project</h2>
+
+          <h3>Objective:</h3>
+          <p>
+            This project is designed to test different prediction algorithms to
+            determine the ideal model for predicting temperature in the
+            short-term. It will use two main kinds of algorithms. The first are
+            traditional statistics models. These are things like linear
+            regression that will take the data and perform some computations
+            with it. The second are machine learning models, which are more
+            advanced models that are supposed to 'learn' based on the data.
+          </p>
+
+          <h3>What work has already been done:</h3>
+          <h4>What have others said the best model is?</h4>
+          <p>
+            Before making my own model, I wanted to see what other people have
+            done and what their results were. Two studies helped me select the
+            models as well as give some insight on what they found their best
+            models to be.
+          </p>
+          <p>
+            Iliyas Ibrahim Iliyas' Performance Evaluation of Machine Learning
+            Models for Weather Forecasting tested linear and ridge regression,
+            as well as Random Forest regression. It claimed that Random Forest
+            outperformed linear and ridge regression.
+          </p>
+          <p>
+            Md Saydur Rahman’s Comparative Evaluation of Weather Forecasting
+            using Machine Learning Models tested gradient boosting and random
+            forest, with gradient boosting having a slight edge. I will be
+            including both of these in my analysis.
+          </p>
+
+          <h4>How I hope to improve on the work others have done</h4>
+          <p>
+            My biggest problem with the sources I find is that they only judge
+            models based on one thing: accuracy. This makes sense intuitively,
+            but I think accuracy shouldn’t be the only metric for judging. I
+            will also add models I think might perform well, to see if there are
+            any that were missed...
+          </p>
+        </div>
+        <div class="weather under">
+          <image src="images/weather-grid-light.png"></image>
+        </div>
+      </div>
+      <div id="Skills"></div>
+      <div id="Experience"></div>
+      <div id="Resume"></div>
+      <div id="Contact"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
