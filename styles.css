@@ -97,7 +97,6 @@ h1 {
 }
 
 #Projects {
-  transition: 0.5s;
   width: 100%;
 }
 #Projects * {
@@ -110,12 +109,20 @@ h1 {
   align-items: center;
   background-color: var(--div-boxes);
   position: relative;
-  float: left;
   width: 50%;
   border-radius: 100px;
   padding: 30px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
+
+#Projects .weather .skill-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+
 .skill-line {
   width: 100%;
   height: 2px;
@@ -123,24 +130,13 @@ h1 {
   margin: 20px 0;
 }
 
-#Projects .weather .skill-box {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
 #Projects .weather .skills {
   display: flex;
   align-items: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 2% 5%;
   border-radius: 20px;
   background-color: var(--skill-boxes);
+  box-sizing: border-box;
 }
 
 #Projects .weather h2 {
