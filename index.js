@@ -23,6 +23,7 @@ toggle_box.onclick = function () {
 function swapImages(choice) {
   let images = document.querySelectorAll("img");
   images.forEach((image) => {
+    console.log(image.src);
     if (choice == "light") {
       image.src = image.src.replace("dark", "light");
     } else if (choice == "dark") {

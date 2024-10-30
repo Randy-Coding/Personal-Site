@@ -5,6 +5,8 @@
   --secondary: #ad81f3;
   --accent: #7234d5;
   --div-boxes: #b899ea;
+  --line-div: hsl(290, 23%, 5%, 70%);
+  --skill-boxes: hsl(263, 83%, 73%, 80%);
 }
 .dark-theme {
   --text: #d7cde2;
@@ -13,6 +15,8 @@
   --secondary: #380c7e;
   --accent: #682acb;
   --div-boxes: #1e1033;
+  --line-div: hsl(290, 23%, 95%, 75%);
+  --skill-boxes: hsl(263, 83%, 27%, 75%);
 }
 
 .navbar ul {
@@ -42,11 +46,22 @@
 body {
   font-family: sans-serif;
   font-weight: 600;
-  color: var(--text); /* Applied text color */
-  background-color: var(--background); /* Applied background color */
+  color: var(--text);
+  background-color: var(--background);
   transition: 0.5s;
 }
-
+#header-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 5%;
+  box-sizing: border-box;
+  background-color: var(--background);
+  z-index: 1;
+  box-shadow: 0px 1px 100px var(--accent);
+  transition: 0.5s;
+}
 #header {
   display: flex;
   justify-content: space-between;
@@ -81,46 +96,60 @@ h1 {
   flex-direction: column;
 }
 
-#Projects h1 {
-  display: block;
-  float: left;
+#Projects {
+  transition: 0.5s;
+  width: 100%;
 }
-#Projects .weather {
+#Projects * {
+  transition: 0.5s;
+}
+
+#Projects .weather .container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   align-items: center;
   background-color: var(--div-boxes);
-}
-
-#Projects .weather.container {
+  position: relative;
+  float: left;
   width: 50%;
   border-radius: 100px;
-  padding: 50px;
+  padding: 30px;
   margin-bottom: 20px;
 }
+.skill-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--line-div);
+  margin: 20px 0;
+}
 
-#Projects .weather.under {
-  width: 50%; /* Same width as container */
-  padding: 20px;
-  background-color: var(--div-boxes); /* Optional: apply background to under */
-  border-radius: 50px; /* Rounded corners */
+#Projects .weather .skill-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+#Projects .weather .skills {
+  display: flex;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  background-color: var(--skill-boxes);
 }
 
 #Projects .weather h2 {
   font-size: 5rem;
 }
 
-#Projects .weather h3 {
-  font-size: 3rem;
-}
-
-#Projects .weather h4 {
-  font-size: 2rem;
-}
-.background_box {
-  margin-right: 35px;
-  background-color: var(--background);
-  transition: 0.5s;
+#Projects .weather img {
+  max-width: 100%;
+  height: auto;
 }
 .toggle_box {
   width: 100px;
