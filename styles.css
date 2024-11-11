@@ -1,12 +1,13 @@
 :root {
-  --text: #0f0a10;
+  --text: #261c31;
   --background: #c3b1e1;
   --primary: #000000;
   --secondary: #ad81f3;
   --accent: #7234d5;
   --div-boxes: #b899ea;
   --line-div: hsla(290, 23%, 5%, 0.7);
-  --skill-boxes: hsla(263, 83%, 73%, 0.8);
+  --skill-boxes: #ad81f3cc;
+  --slider-boxes: hsl(252, 71%, 65%, 55%);
 }
 .dark-theme {
   --text: #d7cde2;
@@ -15,8 +16,9 @@
   --secondary: #380c7e;
   --accent: #682acb;
   --div-boxes: #1e1033;
-  --line-div: hsla(290, 23%, 95%, 0.75);
+  --line-div: rgba(244, 239, 245, 0.749);
   --skill-boxes: hsla(263, 83%, 27%, 0.75);
+  --slider-boxes: #1e1033;
 }
 html {
   scroll-behavior: smooth;
@@ -89,12 +91,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.sauce-inverse {
-  background: linear-gradient(120deg, var(--primary), var(--accent));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 #name {
   font-size: 2rem;
 }
@@ -195,10 +192,14 @@ h1 {
   margin-bottom: 5%;
 }
 
-#Projects h2 {
+#main h3 {
   font-size: 5rem;
 }
-
+#main h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 10rem;
+}
 #Projects .container img {
   width: 100%;
 }
@@ -322,6 +323,82 @@ h1 {
 }
 .face .container {
   float: right;
+}
+
+#Skills {
+  width: 100%;
+}
+
+#Sliders {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--slider-boxes);
+  width: 96%;
+  height: 400px;
+  margin: 1%;
+  margin-top: 5%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -50%;
+  }
+}
+
+.slider {
+  position: absolute;
+  width: auto;
+  max-width: 15%;
+  max-height: 99%;
+  left: 100%;
+  animation-name: scrollLeft;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.slider1 {
+  animation-delay: calc(10s / 9 * (9 - 1));
+}
+.slider2 {
+  animation-delay: calc(10s / 9 * (9 - 2));
+}
+.slider3 {
+  animation-delay: calc(10s / 9 * (9 - 3));
+}
+.slider4 {
+  animation-delay: calc(10s / 9 * (9 - 4));
+}
+.slider5 {
+  animation-delay: calc(10s / 9 * (9 - 5));
+}
+.slider6 {
+  animation-delay: calc(10s / 9 * (9 - 6));
+}
+.slider7 {
+  animation-delay: calc(10s / 9 * (9 - 7));
+}
+.slider8 {
+  animation-delay: calc(10s / 9 * (9 - 8));
+}
+.slider9 {
+  animation-delay: calc(10s / 9 * (9 - 9));
+}
+
+#test {
+  height: 500px;
+  width: 100%;
 }
 
 .toggle_box {
