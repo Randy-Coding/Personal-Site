@@ -5,8 +5,8 @@
   --secondary: #ad81f3;
   --accent: #7234d5;
   --div-boxes: #b899ea;
-  --line-div: hsl(290, 23%, 5%, 70%);
-  --skill-boxes: hsl(263, 83%, 73%, 80%);
+  --line-div: hsla(290, 23%, 5%, 0.7);
+  --skill-boxes: hsla(263, 83%, 73%, 0.8);
 }
 .dark-theme {
   --text: #d7cde2;
@@ -15,10 +15,12 @@
   --secondary: #380c7e;
   --accent: #682acb;
   --div-boxes: #1e1033;
-  --line-div: hsl(290, 23%, 95%, 75%);
-  --skill-boxes: hsl(263, 83%, 27%, 75%);
+  --line-div: hsla(290, 23%, 95%, 0.75);
+  --skill-boxes: hsla(263, 83%, 27%, 0.75);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .navbar ul {
   list-style-type: none;
   padding: 0px;
@@ -50,6 +52,7 @@ body {
   background-color: var(--background);
   transition: 0.5s;
 }
+
 #header-container {
   position: fixed;
   width: 100%;
@@ -86,6 +89,12 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.sauce-inverse {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #name {
   font-size: 2rem;
 }
@@ -96,33 +105,6 @@ h1 {
   flex-direction: column;
 }
 
-#Projects {
-  width: 100%;
-}
-#Projects * {
-  transition: 0.5s;
-}
-
-#Projects .weather .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--div-boxes);
-  position: relative;
-  width: 50%;
-  border-radius: 100px;
-  padding: 30px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-#Projects .weather .skill-box {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 5%;
-}
-
 .skill-line {
   width: 100%;
   height: 2px;
@@ -130,23 +112,218 @@ h1 {
   margin: 20px 0;
 }
 
-#Projects .weather .skills {
+#Projects {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#Projects {
+  position: relative;
+}
+
+#Projects .vertical-line {
+  content: "";
+  position: absolute;
+  top: 0;
+  margin-top: -2%;
+  margin-bottom: -2%;
+
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--text);
+  transform: translateX(-50%);
+  box-shadow: -1px 0 5px var(--text), 1px 0 5px var(--text);
+}
+
+#Projects .top-line {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -2%;
+  width: 5%;
+  height: 2px;
+  background-color: var(--text);
+  transform: translateX(-50%);
+  box-shadow: -1px 0 5px var(--text), 1px 0 5px var(--text);
+}
+
+#Projects .bottom-line {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -2%;
+  left: 50%;
+  width: 5%;
+  height: 2px;
+  background-color: var(--text);
+  transform: translate(-50%, 60%);
+  box-shadow: -1px 0 5px var(--text), 1px 0 5px var(--text);
+}
+
+#Projects .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--div-boxes);
+  position: relative;
+  width: 45%;
+  border-radius: 100px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+#Projects .skill-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+
+#Projects .skills {
   display: flex;
   align-items: center;
   padding: 2% 5%;
   border-radius: 20px;
   background-color: var(--skill-boxes);
-  box-sizing: border-box;
+  margin-bottom: 5%;
 }
 
-#Projects .weather h2 {
+#Projects h2 {
   font-size: 5rem;
 }
 
-#Projects .weather img {
-  max-width: 100%;
-  height: auto;
+#Projects .container img {
+  width: 100%;
 }
+#Projects > * {
+  width: 100%;
+}
+.weather .container {
+  float: left;
+}
+
+.github-button {
+  text-decoration: none;
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  padding: 10px 30px;
+  color: var(--text);
+  background: none;
+  position: relative;
+  z-index: 0;
+  transition: 0.75s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.github-button:hover {
+  letter-spacing: 0.05rem;
+}
+
+.github-button span {
+  position: absolute;
+  display: block;
+  background: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+}
+.github-button span:nth-child(1) {
+  left: 0;
+  top: 0;
+  width: 50.5%;
+  height: 2.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.125s;
+}
+.github-button:hover span:nth-child(1) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.github-button span:nth-child(2) {
+  right: 0;
+  top: 0;
+  width: 50.5%;
+  height: 2.5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.125s;
+}
+.github-button:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.github-button span:nth-child(3) {
+  right: 0;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.125s;
+  transition-delay: 0.1s;
+}
+.github-button:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.github-button span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.125s;
+  transition-delay: 0.1s;
+}
+.github-button:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.github-button span:nth-child(5) {
+  left: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.125s;
+  transition-delay: 0.175s;
+}
+.github-button:hover span:nth-child(5) {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.github-button span:nth-child(6) {
+  right: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.125s;
+  transition-delay: 0.175s;
+}
+.github-button:hover span:nth-child(6) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.face .container {
+  float: right;
+}
+
 .toggle_box {
   width: 100px;
   height: 50px;
