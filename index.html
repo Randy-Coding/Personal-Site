@@ -3,51 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Randy A</title>
+    <title>Kage web</title>
     <link href="styles.css" rel="stylesheet" />
-    <svg width="0" height="0">
-      <defs>
-        <linearGradient id="gradient" gradientTransform="rotate(120)">
-          <stop offset="0%" stop-color="var(--primary)" />
-          <stop offset="100%" stop-color="var(--accent)" />
-        </linearGradient>
-      </defs>
-    </svg>
   </head>
   <body>
     <div id="header-container">
-      <div id = "header">
-      <div id="name">Kage</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#project-marker">Projects</a></li>
-          <li><a href="#skills-marker">Skills</a></li>
-          <li><a href="index.html">Experience</a></li>
-          <li><a href="index.html">Links</a></li>
-          <li><a href="index.html">Resume</a></li>
-          <li><a href="index.html">Contact me</a></li>
-        </ul>
-      </nav>
-      <div class="background_box">
-        <label class="toggle_box">
-          <input type="checkbox" id="checkbox" />
-          <div class="circle"></div>
-        </label>
+      <div id="header">
+        <div id="name">Kage</div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Contact">Links</a></li>
+          </ul>
+        </nav>
+        <div class="background_box">
+          <label class="toggle_box">
+            <input type="checkbox" id="checkbox" />
+            <div class="circle"></div>
+          </label>
+        </div>
       </div>
     </div>
-  </div>
 
-    <h1>Random Profound Quote</h1>
-    <div id="main">
-      <div id = "project-marker"></div>
-      <div id="Projects">
-        <div class = "top-line"></div>
-        <div class = "vertical-line"></div>
+    <main id="main">
+      <section id="intro">
+        <div class="content">
+          <h3 class="sauce">Hello, I'm Kage</h3>
+          <p>
+            I'm an undergraduate Computer Science student currently pursuing a
+            bachelor's degree
+          </p>
+          <p>
+            A lot of my time programming is spent in Python and Java, though I'm
+            building up experience with Javascript as well
+          </p>
+          <div class="buttons">
+            <a
+              href="https://github.com/Randy-Coding"
+              id="gitHub"
+              class="intro-button fancy-button"
+            >
+              Github
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/randy-a-75589a27a/"
+              id="linkedIn"
+              class="intro-button fancy-button"
+            >
+              LinkedIn
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="Projects">
+        <div class="top-line"></div>
+        <div class="vertical-line"></div>
         <div class="bottom-line"></div>
-        <div  class="weather">
+
+        <div class="weather">
           <div class="container">
             <h3 class="sauce">Weather Prediction Project</h3>
-            <img src="images/graph-modified-light.png" alt="Weather Prediction Graph">
+            <img
+              src="images/graph-modified-light.png"
+              alt="Weather Prediction Graph"
+            />
             <div class="skill-line"></div>
             <div class="skill-box">
               <div class="skills">Pandas</div>
@@ -55,62 +79,106 @@
               <div class="skills">CSV</div>
               <div class="skills">Metrics Analysis</div>
             </div>
-            <a href="https://github.com/Randy-Coding/weather_project" target="_blank" class="github-button">
+            <a
+              href="https://github.com/Randy-Coding/weather_project"
+              target="_blank"
+              class="fancy-button"
+            >
               Check it out on GitHub
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a> 
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </a>
           </div>
         </div>
-        <div class = "face">
-          <div class = "container">
-            <h3 class = "sauce">Facial Recognition Project</h3>
-            <img src="images/real-deepface-light.png" alt="Weather Prediction Graph">
+
+        <div class="face">
+          <div class="container">
+            <h3 class="sauce">Facial Recognition Project</h3>
+            <img
+              src="images/deepface-light.png"
+              alt="Facial Recognition Project"
+            />
             <div class="skill-line"></div>
             <div class="skill-box">
               <div class="skills">Keyring</div>
               <div class="skills">CLI</div>
               <div class="skills">Neural Network</div>
               <div class="skills">Threading</div>
-          </div>
-          <a href="https://github.com/Randy-Coding/automated_login" target="_blank" class="github-button">
-            Check it out on GitHub
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </a> 
-        </div>
-        </div>
-        </div>
-        <div id = "skills-marker"></div>
-        <div id="Skills">
-          <h2 class="sauce">Skills</h2>
-          <div id = "Sliders">
-            <img class = "slider slider1" src = "images/python-light.png">
-            <img class = "slider slider2" src = "images/couchDB-light.png">
-            <img class = "slider slider3" src = "images/pandas-light.png">
-            <img class = "slider slider4" src = "images/scikit learn-light.png">
-            <img class = "slider slider5" src = "images/CSS-light.png">
-            <img class = "slider slider6" src = "images/HTML-light.png">
-            <img class = "slider slider7" src = "images/git-light.png">
-            <img class = "slider slider8" src = "images/github-light.png">
-            <img class = "slider slider9" src = "images/java-light.png">
+            </div>
+            <a
+              href="https://github.com/Randy-Coding/automated_login"
+              target="_blank"
+              class="fancy-button"
+            >
+              Check it out on GitHub
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </a>
           </div>
         </div>
-        <div id="Experience">
-          <h2 class = "sauce">Experience</h2>
+      </section>
+      <section id="Skills">
+        <h2 class="sauce">Skills</h2>
+        <div id="Sliders">
+          <img
+            class="slider slider1"
+            src="images/python-light.png"
+            alt="Python"
+          />
+          <img
+            class="slider slider2"
+            src="images/couchDB-light.png"
+            alt="CouchDB"
+          />
+          <img
+            class="slider slider3"
+            src="images/pandas-light.png"
+            alt="Pandas"
+          />
+          <img
+            class="slider slider4"
+            src="images/scikit learn-light.png"
+            alt="Scikit Learn"
+          />
+          <img class="slider slider5" src="images/CSS-light.png" alt="CSS" />
+          <img class="slider slider6" src="images/HTML-light.png" alt="HTML" />
+          <img class="slider slider7" src="images/git-light.png" alt="Git" />
+          <img
+            class="slider slider8"
+            src="images/github-light.png"
+            alt="GitHub"
+          />
+          <img class="slider slider9" src="images/java-light.png" alt="Java" />
         </div>
-        <div id="Resume"></div>
-        <div id="Contact"></div>
-      </div>
-      </div>
+      </section>
+
+      <section id="Contact">
+        <h2 class="sauce">My Links</h2>
+        <div class = "content">
+          <a href="utilities/resume.pdf" download class="download-button"
+          >Download my resume</a
+        >
+        <div class="social-buttons">
+          <a href="https://github.com/Randy-Coding">
+            <img
+              src="images/contact-github-light.png"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/randy-a-75589a27a/"
+          >
+            <img
+              src="images/contact-linkedin-light.png"
+              class="social-icon"
+            />
+          </a>
+        </div>
+        </content>
+
+      </section>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
