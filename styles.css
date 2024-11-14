@@ -32,32 +32,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-  display: flex;
-}
-
-.navbar a {
-  color: var(--text);
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-}
-
-.navbar a:hover {
-  -webkit-text-fill-color: var(--primary);
-  color: black;
-  transform: translate(0, 3px);
-}
-
-.navbar li {
-  font-size: 2rem;
-  float: left;
-}
-
 body {
   font-family: sans-serif;
   font-weight: 600;
@@ -111,10 +85,40 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
   background: linear-gradient(120deg, var(--primary), var(--accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+  margin-left: -3%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  font-size: 2rem;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+.navbar a:hover {
+  -webkit-text-fill-color: var(--primary);
+  color: black;
+  transform: translate(0, 3px);
 }
 
 h1 {
@@ -312,7 +316,7 @@ h1 {
   text-decoration: none;
   width: 50%;
   height: 100%;
-  font-size: 30px;
+  font-size: 1.75rem;
   padding: 10px 30px;
   color: var(--text);
   background: none;
